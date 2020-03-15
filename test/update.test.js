@@ -43,7 +43,6 @@ describe("Updating a user", () => {
     User.updateOne({ name: "Joe" }, { $inc: { postCount: 1 } })
       .then(() => User.findOne({ name: "Joe" }))
       .then(user => {
-        console.log(user);
         assert(user.postCount === 1);
         done();
       });
