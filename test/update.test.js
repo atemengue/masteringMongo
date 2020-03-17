@@ -39,7 +39,7 @@ describe("Updating a user", () => {
 
   it("A model class can find and ", () => {});
 
-  // used xit for pending testing
+  // used xit for pending testing2
   it("A user can have their likes incremented by 1", done => {
     User.updateOne({ name: "Joe" }, { $inc: { likes: 10 } })
       .then(() => User.findOne({ name: "Joe" }))

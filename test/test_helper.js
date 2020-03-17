@@ -19,6 +19,9 @@ before(done => {
 // Hook only avialable on mocha juste pour des tests
 beforeEach(done => {
   mongoose.connection.dropCollection("users", () => {
+    mongoose.connection.dropCollection("comments", () => {
+      mongoose.connection.dropCollection("blogposts", () => {});
+    });
     done();
   });
 });
