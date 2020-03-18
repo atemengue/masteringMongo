@@ -28,7 +28,7 @@ describe("Middleware", () => {
   it("users clean up danling blogposts on remove", done => {
     joe
       .remove()
-      .then(() => BlogPost.count())
+      .then(() => BlogPost.estimatedDocumentCount())
       .then(count => {
         assert(count === 0);
         done();
